@@ -3,6 +3,10 @@ package node
 import "github.com/rasmusrygaard/chord/chord"
 
 func OwnsID(n chord.Node, id chord.ID) bool {
+	if n.Successor().Identifier() == n.Identifier() {
+		return true
+	}
+
 	successor := n.Successor()
 	if successor.Identifier() < n.Identifier() {
 		return id >= n.Identifier() || id < successor.Identifier()

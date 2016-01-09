@@ -1,4 +1,4 @@
-package chord
+package ring
 
 import (
 	"github.com/rasmusrygaard/chord/chord"
