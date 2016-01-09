@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/rasmusrygaard/chord",
+	"GoVersion": "go1.5",
+	"Deps": []
+}
