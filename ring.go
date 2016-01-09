@@ -1,9 +1,13 @@
 package chord
 
+import (
+	"github.com/rasmusrygaard/chord/chord"
+)
+
 type Ring struct {
-	Known Node
+	Known chord.Node
 }
 
-func (r Ring) Lookup(id ID) (Node, error) {
-	r.Known.FindSuccessor(id)
+func (r Ring) Lookup(id chord.ID) (chord.Node, error) {
+	return r.Known.FindSuccessor(id), nil
 }
